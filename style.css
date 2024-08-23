@@ -27,8 +27,15 @@ body {
   border-radius: 50%;
   background-color: #caf0ff;
   display: block;
+  overflow: hidden;
+}
+
+/* input이 선택 되었을때, 다음에 나오는 형제 마크업 하위의 img를 선택 */
+.choice-item input:checked + .choice-item-icon img {
+  transform: scale(0.8) translateY(0) rotate(10deg);
 }
 
 .choice-item-icon img {
-
+  transition: all .4s;
+  transform: scale(0.4) translateY(280px) rotate(0);
 }
