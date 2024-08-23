@@ -50,6 +50,10 @@ body {
   transform: scale(0.8) translateY(0) rotate(-3600000deg);
 }
 
+.choice-item:has(input:focus) .choice-item-icon {
+  box-shadow: 0 0 20px white;
+}
+
 /* animation 진도와 결합! */
 .choice-item:has(input:checked) .choice-item-icon {
   animation-name: wind;
