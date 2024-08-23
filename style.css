@@ -26,6 +26,7 @@ body {
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   background-color: #caf0ff;
+  display: block;
 }
 
 .choice-item-icon img {
