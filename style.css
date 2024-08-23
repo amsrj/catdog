@@ -4,6 +4,10 @@ img {
   vertical-align: top;
 }
 
+input {
+  all: unset;
+}
+
 /* Components */
 body {
   background-color: #98cee8;
@@ -30,8 +34,11 @@ body {
   overflow: hidden;
 }
 
-/* input이 선택 되었을때, 다음에 나오는 형제 마크업 하위의 img를 선택 */
-.choice-item input:checked + .choice-item-icon img {
+/* 
+  + 인접 형제 콤비네이터는 다음 나오는 마크업 대상만 됨 (~이것도 그렇습니다.) 
+  그래서 :has() 사용! -> input:checked를 가지고 있는 .choice-item을 선택! 
+*/
+.choice-item:has(input:checked) img {
   transform: scale(0.8) translateY(0) rotate(10deg);
 }
 
